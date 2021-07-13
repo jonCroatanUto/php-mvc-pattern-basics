@@ -10,37 +10,44 @@ INSERT INTO questions(
 (6,"What advantages do you think this pattern has to use?");
 
 
+
 INSERT INTO answers(
     qst_no,
     anw_no,
-    answers
+    answer,
+    is_correct
 )VALUES
-(1,"1","",true),
-(1,"1","",false),
-(1,"1","",false),
-(1,"1","",false),
+(1,"1","Correct answer",true),
+(1,"2","Wrong answer",false),
+(1,"3","Wrong answer",false),
+(1,"4","Wrong answer",false),
 
-(2,"2","",false),
-(2,"2","",true),
-(2,"2","",false),
-(2,"2","",false),
+(2,"5","Wrong answer",false),
+(2,"6","Correct answer",true),
+(2,"7","Wrong answer",false),
+(2,"8","Wrong answer",false),
 
-(3,"3","",false),
-(3,"3","",false),
-(3,"3","",true),
-(3,"3","",false),
+(3,"9","Wrong answer",false),
+(3,"10","Wrong answer",false),
+(3,"11","Correct answer",true),
+(3,"12","Wrong answer",false),
 
-(4,"4","",true),
-(4,"4","",flase),
-(4,"4","",flase),
-(4,"4","",flase),
+(4,"13","Correct answer",true),
+(4,"14","Wrong answer",false),
+(4,"15","Wrong answer",false),
+(4,"16","Wrong answer",false),
 
-(5,"5","",flase),
-(5,"5","",flase),
-(5,"5","",flase),
-(5,"5","",true),
+(5,"17","Wrong answer",false),
+(5,"18","Wrong answer",false),
+(5,"19","Wrong answer",false),
+(5,"20","Correct answer",true),
 
-(6,"6","",flase),
-(6,"6","",true),
-(6,"6","",flase),
-(6,"6","",flase);
+(6,"21","Wrong answer",false),
+(6,"22","Correct answer",true),
+(6,"23","Wrong answer",false),
+(6,"24","Wrong answer",false);
+
+SELECT question,answer  FROM questions as Q 
+LEFT JOIN answers as A ON Q.qst_no=A.qst_no
+WHERE A.is_correct=true;
+
