@@ -2,16 +2,16 @@
 require_once(MODELS . "./MVCModel.php");
 
 
-if(isset($_GET["is_correct"])){
-    if(isset($_SESSION["nota"])){
-        $_SESSION["nota"]=$_SESSION["nota"]+$_GET["is_correct"];   
-    }else{
-        $_SESSION["nota"]=$_GET["is_correct"];
+if (isset($_GET["is_correct"])) {
+    if (isset($_SESSION["nota"])) {
+        $_SESSION["nota"] = $_SESSION["nota"] + $_GET["is_correct"];
+    } else {
+        $_SESSION["nota"] = $_GET["is_correct"];
     }
 }
-if(isset($_GET['question'])){
-    if($_GET['question']==7){
-        echo $_SESSION["nota"];
+if (isset($_GET['question'])) {
+    if ($_GET['question'] == 7) {
+        require_once("./views/MVC/MVCquizend.php");
         unset($_SESSION["nota"]);
     }
 }
