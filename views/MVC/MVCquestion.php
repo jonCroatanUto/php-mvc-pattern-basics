@@ -27,9 +27,23 @@ require_once(CONTROLLERS . "/MVCController.php");
                 $nextAns = $answer['qst_no'] + 1;
                 echo "<a href='?action=getQuestions&question=$nextAns&is_correct=$answer[is_correct]' class='answer-button'  name='answer-button'>" . $answer['answer'] . "</a>";
             }
+        
+
             ?>
+
         </section>
+        <?php
+            if($_GET['question']==3) {
+                
+                echo ("
+                    
+                    <img scr='./assets/img/Correct.png' class='images' alt='option1'  width='1000' height='600'>
+                ");
+            };
+            ?>
+      
     </div>
+    
 </body>
 
 </html>

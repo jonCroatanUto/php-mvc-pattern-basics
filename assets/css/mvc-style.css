@@ -76,3 +76,7 @@ form {
   color: white;
   background-color: rgb(255, 29, 29);
 }
+.images{
+ min-width: 500px;
+ min-height: 500px;
+}
