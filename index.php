@@ -8,32 +8,6 @@
 // In the event that the controller passed by URL does not exist, you must show the error view.
 
 include_once "config/constants.php";
-
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "exam";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT question FROM questions WHERE questions.qst_no = 1";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while ($row = $result->fetch_assoc()) {
-        echo $row["question"];
-    }
-} else {
-    echo "0 results";
-}
-$conn->close();
-
 ?>
 
 <!DOCTYPE html>
@@ -43,11 +17,21 @@ $conn->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index-style.css">
     <title>Document</title>
 </head>
 
 <body>
-
+    <div class="content-wrapper">
+        <section class="left-section">
+            <h1>SQL Quiz</h1>
+            <a class="start-sql-button" href="views/MVC/MVCquestion.php?question=1">START</a>
+        </section>
+        <section class="right-section">
+            <h1>MVC Quiz</h1>
+            <button class="start-mvc-button">Start</button>
+        </section>
+    </div>
 </body>
 
 </html>
