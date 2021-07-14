@@ -10,7 +10,7 @@ function runGetQuestions($id)
 
 function runGenerateAnswers($id)
 {
-    getAnswers("*", "answers", $id);
+    $data = getAnswers("*", "answers", $id);
 }
 
 function runGetQuestionLeft()

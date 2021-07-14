@@ -23,9 +23,11 @@ function getQuestions($data, $table, $id)
 
     if ($result->num_rows > 0) {
         // output data of each row
-        while ($row = $result->fetch_assoc()) {
+        return $result;
+        /*while ($row = $result->fetch_assoc()) {
             echo $row["question"];
         }
+    */
     } else {
         echo "Hey";
     }
@@ -50,12 +52,14 @@ function getAnswers($data, $table, $id)
     $result = $conn->query($sql);
     //echo "<form>";
     if ($result->num_rows > 0) {
-        // output data of each row
+        return $result;
+        /* output data of each row
         return $result;
         while ($row = $result->fetch_assoc()) {
             //$bool = $row['is_correct'] ? 'true' : 'false';
             //echo "<button type='submit' class='answer-button button-$row[is_correct]' value='$row[is_correct]' id='$bool-$row[anw_no]' name='answer-button'>" . $row["answer"] . "</button>";
         }
+    */
     } else {
         //echo "Hey";
     }
