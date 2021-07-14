@@ -6,7 +6,7 @@
 
 // TODO Implement the logic to include the controller passed by the URL dynamically
 // In the event that the controller passed by URL does not exist, you must show the error view.
-include_once "../../config/constants.php";
+include_once "./config/constants.php";
 require_once(CONTROLLERS . "./MVCController.php");
 if (isset($_GET['answer-button'])) runCheckCorrectAnswer();
 ?>
@@ -18,7 +18,7 @@ if (isset($_GET['answer-button'])) runCheckCorrectAnswer();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/mvc-style.css">
+    <link rel="stylesheet" href="./assets/css/mvc-style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -48,7 +48,7 @@ if (isset($_GET['answer-button'])) runCheckCorrectAnswer();
     </div>
 </body>
 <script>
-    $(".button-1").on("click", () => {
+    $(".button-1").one("click", () => {
         $(".button-1").addClass('correct-answer');
     });
     $(".button-0").one("click", () => {

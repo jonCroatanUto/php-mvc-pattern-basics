@@ -25,7 +25,6 @@ function getQuestions($data, $table, $id)
         // output data of each row
         while ($row = $result->fetch_assoc()) {
             echo $row["question"];
-            $_GET[] = $row["qst_no"];
         }
     } else {
         echo "Hey";
@@ -49,17 +48,18 @@ function getAnswers($data, $table, $id)
 
     $sql = "SELECT $data FROM $table WHERE answers.qst_no = $id";
     $result = $conn->query($sql);
-    echo "<form>";
+    //echo "<form>";
     if ($result->num_rows > 0) {
         // output data of each row
+        return $result;
         while ($row = $result->fetch_assoc()) {
-            $bool = $row['is_correct'] ? 'true' : 'false';
-            echo "<button type='submit' class='answer-button button-$row[is_correct]' value='$row[is_correct]' id='$bool-$row[anw_no]' name='answer-button'>" . $row["answer"] . "</button>";
+            //$bool = $row['is_correct'] ? 'true' : 'false';
+            //echo "<button type='submit' class='answer-button button-$row[is_correct]' value='$row[is_correct]' id='$bool-$row[anw_no]' name='answer-button'>" . $row["answer"] . "</button>";
         }
     } else {
-        echo "Hey";
+        //echo "Hey";
     }
-    echo "</form>";
+    //echo "</form>";
     $conn->close();
 };
 

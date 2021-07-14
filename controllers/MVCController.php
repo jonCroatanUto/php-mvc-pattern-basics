@@ -4,7 +4,8 @@ require_once(MODELS . "./MVCModel.php");
 
 function runGetQuestions($id)
 {
-    getQuestions("*", "questions", $id);
+    $data = getQuestions("*", "questions", $id);
+    require_once("./views/MVC/MVCquestion.php");
 }
 
 function runGenerateAnswers($id)

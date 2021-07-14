@@ -25,7 +25,7 @@ include_once "config/constants.php";
     <div class="content-wrapper">
         <section class="left-section">
             <h1>SQL Quiz</h1>
-            <a class="start-sql-button" href="views/MVC/MVCquestion.php?question=1">START</a>
+            <a class="start-sql-button" href="index.php?controller=questionController&action=runGetQuestions&question=1">START</a>
         </section>
         <section class="right-section">
             <h1>MVC Quiz</h1>
