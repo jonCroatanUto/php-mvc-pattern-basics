@@ -25,7 +25,7 @@ require_once(CONTROLLERS . "/MVCController.php");
             <?php
             foreach ($dataAnswers as $answer) {
                 $nextAns = $answer['qst_no'] + 1;
-                echo "<a href='?controller=questionController&action=getQuestions&question=$nextAns' class='answer-button' value='$answer[is_correct]' name='answer-button'>" . $answer['answer'] . "</a>";
+                echo "<a href='?action=getQuestions&question=$nextAns&is_correct=$answer[is_correct]' class='answer-button'  name='answer-button'>" . $answer['answer'] . "</a>";
             }
             ?>
         </section>

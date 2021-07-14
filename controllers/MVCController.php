@@ -1,8 +1,20 @@
 <?php
 require_once(MODELS . "./MVCModel.php");
 
-$id = 1;
 
+if(isset($_GET["is_correct"])){
+    if(isset($_SESSION["nota"])){
+        $_SESSION["nota"]=$_SESSION["nota"]+$_GET["is_correct"];   
+    }else{
+        $_SESSION["nota"]=$_GET["is_correct"];
+    }
+}
+if(isset($_GET['question'])){
+    if($_GET['question']==7){
+        echo $_SESSION["nota"];
+        unset($_SESSION["nota"]);
+    }
+}
 if (isset($_GET['action'])) {
     $dataQuestions = getQuestions($_GET['question']);
     $dataAnswers = getAnswers($_GET['question']);

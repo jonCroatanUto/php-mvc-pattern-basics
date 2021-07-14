@@ -13,7 +13,7 @@ $id = 1;
 
 <body>
 
-    <a class="start-sql-button" href="?controller=questionController&action=getQuestions&question=<?php echo $id ?>">START</a>
+    <a class="start-sql-button" href="?action=getQuestions&question=<?php echo $id ?>">START</a>
 </body>
 
 </html>
