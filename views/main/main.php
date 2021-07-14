@@ -1,5 +1,4 @@
 <?php
-require_once(CONTROLLERS . "/MVCController.php");
 $id = 1;
 ?>
 <!DOCTYPE html>

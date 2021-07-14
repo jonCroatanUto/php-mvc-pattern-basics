@@ -7,13 +7,10 @@ if (isset($_GET['action'])) {
     $dataQuestions = getQuestions($_GET['question']);
     $dataAnswers = getAnswers($_GET['question']);
     $checkAnswer = checkAnswer($_GET['question']);
-    
-    require_once("./views/MVC/MVCquestion.php");
-}
 
-if (isset($_GET['action'])) {
-    $data = getQuestions($_GET['question']);
     require_once("./views/MVC/MVCquestion.php");
+} else {
+    require_once(VIEWS . "./main/main.php");
 }
 
 // if (function_exists($action)) {
