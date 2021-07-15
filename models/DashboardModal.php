@@ -24,3 +24,31 @@ function getAllQuestions(){
     }
     $conn->close();
 }
+function deleteQuery($id){
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "exam";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    //$conn->query("DELETE FROM questions AS A WHERE A.qst_no=$id");
+    $sql = "DELETE FROM questions  WHERE questions.qst_no=$id";
+    $conn->query($sql);
+    if ($conn->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+      } else {
+        echo "Error deleting record: " . $conn->error;
+      }
+    // if ($result->num_rows > 0) {
+    //     while ($row = $result->fetch_assoc()) {
+    //         $dataAllQuestions[] = $row;
+    //     }
+    //     return $dataAllQuestions;
+    // } else {
+    //     exit;
+    // }
+     $conn->close();
+}

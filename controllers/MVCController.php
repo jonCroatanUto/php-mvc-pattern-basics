@@ -26,8 +26,4 @@ if (isset($_GET['action'])) {
 }
 
 
-// if (function_exists($action)) {
-//     call_user_func($action, $_REQUEST);
-// } else {
-//     error("Invalid user action");
-// }
+
