@@ -65,7 +65,4 @@ send querys to the database 'Model' and gets the data with functionality'Control
 (6,"23","The framework navigation can be complex because it introduces new layers of abstraction and requires users to adapt to the decomposition criteria of MVC.",false),
 (6,"24","Knowledge on multiple technologies becomes the norm. Developers using MVC need to be skilled in multiple technologies",false);
 
-SELECT question,answer  FROM questions as Q 
-LEFT JOIN answers as A ON Q.qst_no=A.qst_no
-WHERE A.is_correct=true;
 

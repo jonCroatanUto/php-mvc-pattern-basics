@@ -33,7 +33,7 @@
                                 <td>$question[question]</td>
                                 <td>Otto</td>
                                 <td>            
-                                <button class='btn btn-danger'>Delete</button>
+                                <a href='?goToDash=true&id=$question[qst_no]&action=delete' class='btn btn-danger'>Delete</a>
                                 </td>
                         </tr>
                     ");
