@@ -14,7 +14,6 @@ if (isset($_GET['question'])) {
         require_once("./views/MVC/MVCquizend.php");
         unset($_SESSION["nota"]);
     }
-    
 }
 if (isset($_GET['action'])) {
     $dataQuestions = getQuestions($_GET['question']);

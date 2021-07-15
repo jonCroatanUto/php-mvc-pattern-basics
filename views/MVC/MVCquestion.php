@@ -27,22 +27,31 @@ require_once(CONTROLLERS . "/MVCController.php");
                 $nextAns = $answer['qst_no'] + 1;
                 echo "<a href='?action=getQuestions&question=$nextAns&is_correct=$answer[is_correct]' class='answer-button'  name='answer-button'>" . $answer['answer'] . "</a>";
             }
-        
+
 
             ?>
 
         </section>
         <?php
-            if($_GET['question']==3) {
-                
-                echo ("
-                       <img src='./assets/img/Correct.png' class='images' alt='option1'  width='1000' height='600'>
-                ");
-            };
-            ?>
-      
+        if ($_GET['question'] == 3) {
+            echo ("
+            <div class='image-wrapper'>
+                <p>Option 1</p>
+                <img src='./assets/img/wrong-2.png' class='images' alt='option3'/>
+                <p>Option 2</p>
+                <img src='./assets/img/wrong-1.png' class='images' alt='option2'/>
+            </div>
+            <div class='image-wrapper'>
+                <p>Option 3</p>
+                <img src='./assets/img/correct.png' class='images' alt='option1'/>
+                <p>Option 4</p>
+                <img src='./assets/img/wrong-3.png' class='images' alt='option4'/>
+            </div>");
+        };
+        ?>
+
     </div>
-    
+
 </body>
 
 </html>

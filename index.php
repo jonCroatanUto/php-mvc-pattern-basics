@@ -6,7 +6,10 @@
 
 include_once "config/constants.php";
 if(isset($_GET["start"])){
-    unset($_SESSION["nota"]);
+    if(isset($_SESSION["nota"])){
+        unset($_SESSION["nota"]);
+    }
+    
 }
 if(isset($_GET["goToDash"])){
     require_once(CONTROLLERS . "/dashBoardController.php");
