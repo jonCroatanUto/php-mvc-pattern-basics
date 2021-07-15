@@ -33,7 +33,7 @@
                             <th scope='row'>$question[qst_no]</th>
                                 <td>$question[question]</td>
                                 <td>            
-                                <a href='?goToDash=true&id=$question[qst_no]' class='btn btn-primary' data-bs-toggle='modal'>Edit</a>
+                                <a href='?goToDash=true&id=$question[qst_no]' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#staticBackdrop'>Edit</a>
                                 <a href='?goToDash=true&id=$question[qst_no]&action=delete' class='btn btn-danger'>Delete</a>
                                 </td>
                         </tr>
