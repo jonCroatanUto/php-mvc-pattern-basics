@@ -52,7 +52,7 @@ function getAllAnswers($id)
     $conn->close();
 }
 
-function updateQuestion($question, $id)
+function deleteQuery($id)
 {
     $servername = "localhost";
     $username = "root";
@@ -63,12 +63,21 @@ function updateQuestion($question, $id)
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
-    $sql = "UPDATE questions SET question='$question' WHERE questions.qst_no=$id;";
+    //$conn->query("DELETE FROM questions AS A WHERE A.qst_no=$id");
+    $sql = "DELETE FROM questions  WHERE questions.qst_no=$id";
+    $conn->query($sql);
     if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+        echo "Record deleted successfully";
     } else {
-        echo "Error updating record: " . $conn->error;
+        echo "Error deleting record: " . $conn->error;
     }
+    // if ($result->num_rows > 0) {
+    //     while ($row = $result->fetch_assoc()) {
+    //         $dataAllQuestions[] = $row;
+    //     }
+    //     return $dataAllQuestions;
+    // } else {
+    //     exit;
+    // }
     $conn->close();
-};
+}
