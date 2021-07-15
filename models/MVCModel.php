@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 function getQuestions($id)
 {
     $servername = "localhost";

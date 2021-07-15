@@ -1,6 +1,6 @@
 <?php
 require_once(MODELS . "./MVCModel.php");
-
+require_once(VIEWS."/main/butonToDashboard.php");
 
 if (isset($_GET["is_correct"])) {
     if (isset($_SESSION["nota"])) {
@@ -25,6 +25,7 @@ if (isset($_GET['action'])) {
 } else {
     require_once(VIEWS . "./main/main.php");
 }
+
 
 // if (function_exists($action)) {
 //     call_user_func($action, $_REQUEST);

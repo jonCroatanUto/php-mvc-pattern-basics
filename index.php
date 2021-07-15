@@ -5,6 +5,13 @@
 // dynamically so that it ends up including the view.
 
 include_once "config/constants.php";
-require_once(CONTROLLERS . "/MVCController.php");
+if(isset($_GET["start"])){
+    unset($_SESSION["nota"]);
+}
+if(isset($_GET["goToDash"])){
+    require_once(CONTROLLERS . "/dashBoardController.php");
+}else{
+    require_once(CONTROLLERS . "/MVCController.php");
+}
 // TODO Implement the logic to include the controller passed by the URL dynamically
 // In the event that the controller passed by URL does not exist, you must show the error view.
