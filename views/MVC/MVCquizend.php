@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <?php
+    require_once(VIEWS."main/header.php");
+    ?>
     <section class="nota-wrapper">
         <span class='span-nota'>
             <?php

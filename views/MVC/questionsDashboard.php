@@ -10,6 +10,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+    require_once(VIEWS."main/header.php");
+    ?>
     <section class='Dashboard'>
     <table class="table">
         <thead>

@@ -13,6 +13,9 @@ require_once(CONTROLLERS . "/MVCController.php");
 </head>
 
 <body>
+    <?php
+    require_once(VIEWS."main/header.php");
+    ?>
     <div class="question-wrapper">
         <section class="question">
             <h1>
