@@ -1,9 +1,9 @@
 <?php
 require_once(MODELS . "DashboardModal.php");
-$allQuestion=getAllQuestions();
+$allQuestion = getAllQuestions();
 
-if(isset($_GET["action"])){
-    $action=$_GET["action"];
+if (isset($_GET["action"])) {
+    $action = $_GET["action"];
     if (function_exists($action)) {
         call_user_func($action, $_REQUEST);
     } else {
@@ -11,9 +11,10 @@ if(isset($_GET["action"])){
     }
 }
 
-function delete(){
-    
+function delete()
+{
+
     deleteQuery($_GET["id"]);
     // echo print_r($item);
 }
-require_once(VIEWS ."MVC/questionsDashboard.php");
+require_once(VIEWS . "MVC/questionsDashboard.php");
