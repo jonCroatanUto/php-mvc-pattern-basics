@@ -27,10 +27,7 @@ require_once(CONTROLLERS . "/MVCController.php");
                 $nextAns = $answer['qst_no'] + 1;
                 echo "<a href='?action=getQuestions&question=$nextAns&is_correct=$answer[is_correct]' class='answer-button'  name='answer-button'>" . $answer['answer'] . "</a>";
             }
-
-
             ?>
-
         </section>
         <?php
         if ($_GET['question'] == 3) {

@@ -15,7 +15,10 @@ $id = 1;
 <body>
     <section class="start-wrapper">
         <h1>PHP MVC QUIZ PROJECT</h1>
-        <a class="start-sql-button" href="?controller=questionController&action=getQuestions&question=<?php echo $id ?>"><span class="start-text">START</span></a>
+        <div class="main-buttons">
+            <a class="main-button" href="?controller=questionController&action=getQuestions&question=<?php echo $id ?>"><span class="start-text">Start</span></a>
+            <a class="main-button" href="?goToDash=true"><span class="start-text">Dashboard</span></a>
+        </div>
     </section>
 </body>
 
