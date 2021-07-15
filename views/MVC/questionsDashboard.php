@@ -42,6 +42,7 @@
         </tbody>
     </table>
     </section>
+    <script src="./assets/js/utils.js"></script>
     <a class="start-sql-button" href="?start=again"><span class="start-text">to start</span></a>
 </body>
 
