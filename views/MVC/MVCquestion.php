@@ -36,8 +36,7 @@ require_once(CONTROLLERS . "/MVCController.php");
             if($_GET['question']==3) {
                 
                 echo ("
-                    
-                    <img scr='./assets/img/Correct.png' class='images' alt='option1'  width='1000' height='600'>
+                       <img src='./assets/img/Correct.png' class='images' alt='option1'  width='1000' height='600'>
                 ");
             };
             ?>

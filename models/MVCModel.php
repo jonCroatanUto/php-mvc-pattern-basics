@@ -77,7 +77,4 @@ function checkAnswer($id)
     $conn->close();
 };
 
-function incrementId($id)
-{
-    $id = $id + 1;
-};
+
