@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 function getQuestions($id)
 {
     $servername = "localhost";
@@ -77,7 +78,4 @@ function checkAnswer($id)
     $conn->close();
 };
 
-function incrementId($id)
-{
-    $id = $id + 1;
-};
+
