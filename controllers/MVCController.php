@@ -1,7 +1,6 @@
 <?php
 require_once(MODELS . "./MVCModel.php");
 
-
 if (isset($_GET["is_correct"])) {
     if (isset($_SESSION["nota"])) {
         $_SESSION["nota"] = $_SESSION["nota"] + $_GET["is_correct"];
@@ -14,7 +13,6 @@ if (isset($_GET['question'])) {
         require_once("./views/MVC/MVCquizend.php");
         unset($_SESSION["nota"]);
     }
-    
 }
 if (isset($_GET['action'])) {
     $dataQuestions = getQuestions($_GET['question']);
@@ -25,9 +23,3 @@ if (isset($_GET['action'])) {
 } else {
     require_once(VIEWS . "./main/main.php");
 }
-
-// if (function_exists($action)) {
-//     call_user_func($action, $_REQUEST);
-// } else {
-//     error("Invalid user action");
-// }
