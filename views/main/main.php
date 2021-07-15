@@ -13,9 +13,6 @@ $id = 1;
 </head>
 
 <body>
-    <?php
-    require_once(VIEWS . "main/header.php");
-    ?>
     <section class="start-wrapper">
         <h1>PHP MVC QUIZ PROJECT</h1>
         <div class="main-buttons">

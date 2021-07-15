@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+.navbar {
+  margin-bottom: 5%;
+}
+
 h1 {
   width: 98vh;
   font-size: 60px;
