@@ -42,11 +42,10 @@
                 ?>
             </tbody>
         </table>
-        <<<<<<< HEAD <span class="back-button-wrapper">
+        <span class="back-button-wrapper">
             <a class="btn btn-primary" href="?start=again"><span class="start-text">Back</span></a>
-            </span>
-            =======
-            >>>>>>> 929e3e69545e651604f2ee13d78b15afb6fb2f51
+        </span>
+
     </section>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -59,13 +58,13 @@
                     <div class="modal-body">
                         <label for="question" class="form-label">Question</label>
                         <input type="text" class="form-control" id="question" value="<?php echo $question['question']; ?>">
-                        <<<<<<< HEAD=======<?php
-                                            foreach ($allAnswers as $answer) {
-                                                echo ("<label for='answer-$question[qst_no]' class='form-label'>Answer option $answer[anw_no]</label>
+                        <?php
+                        foreach ($allAnswers as $answer) {
+                            echo ("<label for='answer-$question[qst_no]' class='form-label'>Answer option $answer[anw_no]</label>
                             <input type='text' class='form-control' id='answer-$question[qst_no]' value='$answer[answer]'>
                                 ");
-                                            }
-                                            ?>>>>>>>> 929e3e69545e651604f2ee13d78b15afb6fb2f51
+                        }
+                        ?>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Update</button>
@@ -74,8 +73,7 @@
             </div>
         </div>
     </div>
-    <<<<<<< HEAD=======<a class="start-sql-button" href="?start=again"><span class="start-text">to start</span></a>
-        >>>>>>> 929e3e69545e651604f2ee13d78b15afb6fb2f51
+
 </body>
 <script src="./assets/js/utils.js"></script>
 
