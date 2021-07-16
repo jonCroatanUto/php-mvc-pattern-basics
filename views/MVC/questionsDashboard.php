@@ -59,13 +59,6 @@
                     <div class="modal-body">
                         <label for="question" class="form-label">Question</label>
                         <input type="text" class="form-control" id="question" value="<?php echo $question['question']; ?>">
-                        <?php
-                        foreach ($allAnswers as $answer) {
-                            echo ("<label for='answer-$question[qst_no]' class='form-label'>Answer option $answer[anw_no]</label>
-                            <input type='text' class='form-control' id='answer-$question[qst_no]' value='$answer[answer]'>
-                                ");
-                        }
-                        ?>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Update</button>
