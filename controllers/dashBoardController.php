@@ -20,6 +20,6 @@ function delete()
 
     deleteQuery($_GET["id"]);
     // echo print_r($item);
-    header("Location:?goToDash=true");
+   header("Location:?goToDash=true");
 }
 require_once(VIEWS . "MVC/questionsDashboard.php");
