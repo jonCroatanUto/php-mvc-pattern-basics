@@ -26,6 +26,32 @@ function getAllQuestions()
     $conn->close();
 }
 
+function getAllAnswers($id)
+{
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "exam";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM answers WHERE answers.qst_no = $id";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $dataAllAnswers[] = $row;
+        }
+        return $dataAllAnswers;
+    } else {
+        exit;
+    }
+    $conn->close();
+}
+
 function deleteQuery($id)
 {
     $servername = "localhost";

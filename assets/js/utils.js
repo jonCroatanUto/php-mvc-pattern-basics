@@ -1,0 +1,1 @@
+$('#staticBackdrop').trigger('click');
