@@ -17,6 +17,25 @@ a {
   text-decoration: none;
 }
 
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-button-wrapper {
+  width: 100%;
+  margin-left: 4%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+table {
+  width: 95% !important;
+}
+
 .back-button {
   display: flex;
   flex-direction: row;

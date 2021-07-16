@@ -18,14 +18,19 @@ h1 {
   font-size: 60px;
   text-align: center;
   margin: 0;
+  font-weight: 600;
 }
 
 .span-nota {
-  width: 98vh;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
   font-size: 60px;
-  text-align: center;
   font-weight: 800;
   margin-bottom: 5%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .number-correct {
@@ -35,9 +40,8 @@ h1 {
 .nota-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   margin: 0;
 }
 
@@ -50,8 +54,6 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 12vh;
-  height: 4vh;
   padding: 10px 20px;
   border-radius: 5px;
   color: white;

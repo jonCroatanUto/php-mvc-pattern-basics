@@ -8,6 +8,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   background-color: rgb(255, 64, 64);
+  display: flex;
+  justify-content: center;
 }
 
 .navbar {
@@ -18,7 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  width: 85%;
 }
 
 h1 {
@@ -52,7 +55,7 @@ a {
   background-color: white;
   color: rgb(149, 56, 255);
   box-shadow: 0px 0px 32px -7px rgba(71, 71, 71, 0.75);
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .main-buttons {

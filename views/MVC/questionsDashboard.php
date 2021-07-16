@@ -15,8 +15,8 @@
     <?php
     require_once(VIEWS . "main/header.php");
     ?>
-    <section class='Dashboard'>
-        <table class="table table-dark table-striped">
+    <section class='dashboard'>
+        <table class="table table-ligth table-striped">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -33,7 +33,7 @@
                             <th scope='row'>$question[qst_no]</th>
                                 <td>$question[question]</td>
                                 <td>            
-                                <a href='?goToDash=true&id=$question[qst_no]' class='btn btn-primary' id='edit-button'>Edit</a>
+                                <a href='?goToDash=true&question_id=$question[qst_no]&action=edit' class='btn btn-primary' id='edit-button'>Edit</a>
                                 <a href='?goToDash=true&id=$question[qst_no]&action=delete' class='btn btn-danger'>Delete</a>
                                 </td>
                         </tr>
@@ -42,6 +42,9 @@
                 ?>
             </tbody>
         </table>
+        <span class="back-button-wrapper">
+            <a class="btn btn-primary" href="?start=again"><span class="start-text">Back</span></a>
+        </span>
     </section>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -62,8 +65,6 @@
             </div>
         </div>
     </div>
-    <a class="back-button" href="?start=again"><span class="start-text">to start</span></a>
-
 </body>
 <script src="./assets/js/utils.js"></script>
 
