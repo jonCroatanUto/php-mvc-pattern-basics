@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="./assets/css/dashboard-style.css">
     <title>Document</title>
 </head>
@@ -33,7 +34,7 @@
                             <th scope='row'>$question[qst_no]</th>
                                 <td>$question[question]</td>
                                 <td>            
-                                <a href='?goToDash=true&question_id=$question[qst_no]&action=edit' class='btn btn-primary' id='edit-button'>Edit</a>
+                                <button class='btn btn-primary' id='edit-button' data-id='$question[qst_no]' data-bs-toggle='modal' data-bs-target='#staticBackdrop'>Edit</button>
                                 <a href='?goToDash=true&id=$question[qst_no]&action=delete' class='btn btn-danger'>Delete</a>
                                 </td>
                         </tr>
