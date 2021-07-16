@@ -1,6 +1,7 @@
 <?php
 
-function getAllQuestions(){
+function getAllQuestions()
+{
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -24,7 +25,35 @@ function getAllQuestions(){
     }
     $conn->close();
 }
-function deleteQuery($id){
+
+function getAllAnswers($id)
+{
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "exam";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM answers WHERE answers.qst_no = $id";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $dataAllAnswers[] = $row;
+        }
+        return $dataAllAnswers;
+    } else {
+        exit;
+    }
+    $conn->close();
+}
+
+function deleteQuery($id)
+{
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -42,7 +71,7 @@ function deleteQuery($id){
   
       } else {
         echo "Error deleting record: " . $conn->error;
-      }
+    }
     // if ($result->num_rows > 0) {
     //     while ($row = $result->fetch_assoc()) {
     //         $dataAllQuestions[] = $row;
@@ -51,5 +80,5 @@ function deleteQuery($id){
     // } else {
     //     exit;
     // }
-     $conn->close();
+    $conn->close();
 }

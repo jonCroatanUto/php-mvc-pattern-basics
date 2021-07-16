@@ -1,9 +1,13 @@
 <?php
 require_once(MODELS . "DashboardModal.php");
-$allQuestion=getAllQuestions();
+$allQuestion = getAllQuestions();
 
-if(isset($_GET["action"])){
-    $action=$_GET["action"];
+$allQuestions = getAllQuestions();
+if (isset($_GET['id'])) $allAnswers = getAllAnswers($_GET['id']);
+//updateQuestion("New Question 1", 1);
+
+if (isset($_GET["action"])) {
+    $action = $_GET["action"];
     if (function_exists($action)) {
         call_user_func($action, $_REQUEST);
     } else {
@@ -11,10 +15,11 @@ if(isset($_GET["action"])){
     }
 }
 
-function delete(){
-    
+function delete()
+{
+
     deleteQuery($_GET["id"]);
     // echo print_r($item);
    header("Location:?goToDash=true");
 }
-require_once(VIEWS ."MVC/questionsDashboard.php");
+require_once(VIEWS . "MVC/questionsDashboard.php");

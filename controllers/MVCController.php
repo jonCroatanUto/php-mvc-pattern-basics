@@ -1,7 +1,6 @@
 <?php
 require_once(MODELS . "./MVCModel.php");
 
-
 if (isset($_GET["is_correct"])) {
     if (isset($_SESSION["nota"])) {
         $_SESSION["nota"] = $_SESSION["nota"] + $_GET["is_correct"];
@@ -21,11 +20,9 @@ if (isset($_GET['action'])) {
     $checkAnswer = checkAnswer($_GET['question']);
     //require_once(VIEWS."/main/butonToDashboard.php");
     require_once("./views/MVC/MVCquestion.php");
-    
 } else {
-    
-    require_once(VIEWS . "./main/main.php");  
-    
+
+    require_once(VIEWS . "./main/main.php");
 }
 
 
